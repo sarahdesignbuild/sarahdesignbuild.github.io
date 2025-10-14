@@ -8,3 +8,47 @@
     --blue-gray: #526586;
     --light-blue: #94B3C2;
 }
+
+nav {
+    background-color: var(--main-blue);
+}
+
+body {
+    background-color: var(--light-blue);
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+}
+
+ul {
+    li {
+        .nav-link {
+            color: var(--white);
+            font-size: 1.75rem;
+            margin-right: 2rem;
+        }
+        
+        .active {
+            color: var(--darker-blue) !important;
+            text-decoration: underline;
+        }
+    }
+}
+
+.card {
+    background-color: var(--light-blue);
+    padding: 0.75rem 5rem;
+    border: none;
+    border-bottom: 2px solid var(--dark-blue);
+    h1 {
+        text-align: center;
+        font-size: 2.25rem;
+    }
+}
+
+footer {
+    background-color: var(--main-blue);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
