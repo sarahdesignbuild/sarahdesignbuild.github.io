@@ -9,9 +9,11 @@
     --light-blue: #94B3C2;
 }
 
-header {
+.navbar {
     position: sticky;
     top: 0;
+    box-shadow: 0 1px 8px var(--black);
+    z-index: 9;
 }
 
 nav {
@@ -42,6 +44,7 @@ ul {
 
 .card {
     background-color: var(--light-blue);
+    /* color: var(--darker-blue); */
     padding: 0.75rem 5rem;
     border: none;
     border-bottom: 2px solid var(--dark-blue);
@@ -55,8 +58,5 @@ ul {
 
 footer {
     background-color: var(--main-blue);
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
 }
