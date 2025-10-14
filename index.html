@@ -21,7 +21,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <!-- TODO Fix the size -->
-        <img src="logo.png" alt="Logo" width="232" height="78" class="d-inline-block align-text-top">
+        <img src="logo.png" alt="Logo" width="232" height="78" class="d-inline-block align-text-top" id="main-logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -126,7 +126,7 @@
 
   <footer class="text-center text-lg-start">
     <div class="text-center p-3">
-      © 2025 Vuurens Design Build | A <a href="https://seidman-ad.am" target="_blank" style="color: black;">Seidman</a> and <a href="https://zachkrasne.com" target="_blank" style="color: black;">Krasne</a> Website | <a href="/privacy.html" target="_blank" style="font-size: 0.95em; color: black;">Privacy Policy</a>
+      © 2025 Vuurens Design Build | A <a href="https://seidman-ad.am/" target="_blank" style="color: black;">Seidman</a> and <a href="https://zachkrasne.com/" target="_blank" style="color: black;">Krasne</a> Website | <a href="/privacy.html" target="_blank" style="font-size: 0.95em; color: black;">Privacy Policy</a>
     </div>
   </footer>
 
@@ -136,6 +136,16 @@
         $('a.nav-link').removeClass('active')
         $(this).addClass('active')
       })
+      $('img#main-logo').click(function() {
+        $('a.nav-link').removeClass('active')
+      })
+      if (typeof galleryPhotos !== 'object') {
+        console.error('Cannot load gallery!');
+        return;
+      }
+      Object.entries(galleryPhotos).forEach(([name, obj]) => {
+        $('div#tempLinks').append(`<a href="gallery.html?${name}">${obj.title}</a>`)
+      });
     })
   </script>
 <!-- Bootstrap Scripts -->
