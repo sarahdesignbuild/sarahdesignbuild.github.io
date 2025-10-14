@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vuurens Design Build</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="/lightgallery/picturefill.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="manifest" href="/site.webmanifest">
-    <script src="/images/images-list.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuurens Design Build</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/gallery.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="/lightgallery/picturefill.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="/images/images-list.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
 </head>
-<body>
-    <div class="demo-gallery"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/gallery.js"></script>
-    <script src="/lightgallery/picturefill.min.js"></script>
-    <script src="/lightgallery/lightgallery.js"></script>
-    <script src="/lightgallery/lg-paper.js"></script>
-    <script src="/lightgallery/lg-autoplay.js"></script>
-    <script src="/lightgallery/lg-fullscreen.js"></script>
-    <script src="/lightgallery/lg-zoom.js"></script>
-    <script src="/lightgallery/lg-hash.js"></script>
-    <script src="/lightgallery/lg-share.js"></script>
-    <script>
-        lightGallery(document.getElementById('lightgallery'));
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="/object-watch.js"></script>
+<body data-spy="scroll" data-offset="10">
+  <div class="demo-gallery">
+    <ul id="lightgallery" class="list-unstyled row"></ul>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function createGalleryTiles(directory, imgList) {
+      if (!Array.isArray(imgList) || imgList.length < 1 || typeof imgList[0] !== 'string') {
+        console.error('Invalid image list provided to createGalleryTiles.');
+        return;
+      }
+      if (typeof directory !== 'string' || directory.trim() === '') {
+        console.error('Invalid directory provided to createGalleryTiles.');
+        return;
+      }
+      function createImage(src) {
+        src = `/images/${directory}/${src}`;
+        return `<li class="col-xs-6 col-sm-4 col-md-3" data-src="${src}"><a href=""><img class="img-responsive" src="${src}" alt="Gallery Image"></a></li>`;
+      }
+      imgList.forEach((img) => {
+        $('ul#lightgallery').append(createImage(img));
+      })
+    }
+    $(document).ready(() => {
+        if (typeof galleryPhotos !== 'object') {
+            alert('Cannot load gallery!');
+            console.error('gallery', galleryPhotos);
+            return;
+        }
+        const name = window.location.search?.slice(1)?.trim();
+        if (!Object.keys(galleryPhotos).includes(name)) {
+            alert('Cannot find gallery: ' + name);
+            console.error('Load error', galleryPhotos, name, window.location.search);
+            return;
+        }
+        createGalleryTiles(name, galleryPhotos[name].images);
+    })
+  </script>
+  <script src="/lightgallery/picturefill.min.js"></script>
+  <script src="/lightgallery/lightgallery.js"></script>
+  <script src="/lightgallery/lg-pager.js"></script>
+  <script src="/lightgallery/lg-autoplay.js"></script>
+  <script src="/lightgallery/lg-fullscreen.js"></script>
+  <script src="/lightgallery/lg-zoom.js"></script>
+  <script src="/lightgallery/lg-hash.js"></script>
+  <script src="/lightgallery/lg-share.js"></script>
+  <script>
+    lightGallery(document.getElementById('lightgallery'));
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="/object-watch.js"></script>
 </body>
 </html>
