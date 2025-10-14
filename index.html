@@ -144,7 +144,7 @@
         return;
       }
       Object.entries(galleryPhotos).forEach(([name, obj]) => {
-        $('div#tempLinks').append(`<a href="gallery.html?${name}">${obj.title}</a>`)
+        $('div#tempLinks').append(`<a href="gallery?${name}">${obj.title}</a>`)
       });
     })
   </script>
