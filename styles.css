@@ -60,3 +60,7 @@ footer {
     background-color: var(--main-blue);
     width: 100%;
 }
+
+ul#offered-services li {
+    list-style-type: none;
+}
