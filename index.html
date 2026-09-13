@@ -3,117 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vuurens Design Build</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <title>Vuurens Design Build | Home Remodeling &amp; Custom Carpentry in NJ</title>
+  <meta name="description" content="Brian P. Vuurens Construction: licensed and fully insured New Jersey home improvement contractor specializing in custom finish carpentry, kitchens, bathrooms, patios, stonework and complete interior and exterior remodeling.">
+  <meta name="theme-color" content="#f7f4ee">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="manifest" href="/site.webmanifest">
-  <script src="/images/images-list.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg mb-2">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <!-- TODO Fix the size -->
-        <img src="logo.png" alt="Logo" width="232" height="78" class="d-inline-block align-text-top" id="main-logo">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Brian P. Vuurens Construction, home">
+        <img src="logo.png" alt="Brian P. Vuurens Construction" width="1696" height="656">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contactUs">Contact Us</a>
-          </li>
+      <nav class="site-nav" id="site-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a class="btn btn-primary" href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Licensed &amp; fully insured &middot; NJ Lic #13VH03737800</span>
+        <h1>Complete interior &amp; exterior home remodeling</h1>
+        <p>Custom finish carpentry, kitchens, bathrooms, patios and stonework, from a second-generation New Jersey contractor.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#gallery">See our work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="wrap about-grid">
+        <div>
+          <span class="eyebrow">About us</span>
+          <h2 class="section-title">Craftsmanship you can live with for decades</h2>
+          <p>Brian P. Vuurens began in 1997, growing from a small second-generation home improvement business. We specialize in custom finish carpentry and complete interior and exterior home remodeling.</p>
+          <p>Whether you've just purchased your first home or are moving to your retirement spot on the shore, our 30 years of experience and skills can transform your property into a home you'll love.</p>
+
+          <div class="facts">
+            <div><strong>1997</strong><span>In business since</span></div>
+            <div><strong>30 yrs</strong><span>Of experience</span></div>
+            <div><strong>2nd</strong><span>Generation business</span></div>
+          </div>
+
+          <div class="certs">
+            <h3>Certifications</h3>
+            <ul>
+              <li>Plaza School of Technology: Drafting</li>
+              <li>Rutgers: Basics of Landscape Design</li>
+              <li>Rutgers: Basics of Plant Material for Landscape Use</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about-photo">
+          <img src="images/web/large/exterior/20200818_154414.jpg" alt="Finished exterior remodel with stone steps, patio and new plantings" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Services</span>
+          <h2>What we do</h2>
+          <p>From a single custom built-in to a full renovation, inside and out.</p>
+        </div>
+        <ul class="services">
+          <li>Additions</li>
+          <li>Decks</li>
+          <li>Bathrooms</li>
+          <li>Kitchens</li>
+          <li>Natural Stone &amp; Interlocking Walls</li>
+          <li>Paver or Stone Patios &amp; Walkways</li>
+          <li>Excavating &amp; Drainage Work</li>
+          <li>Natural Style Plantings</li>
+          <li>Complete Interior &amp; Exterior Home Remodeling</li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <div id="about" class="card">
-    <h1>About</h1>
-    <h4>Brian Vuurens Landscaping - Home Improvement Contractors - licensed and fully Insured.</h2>
-    <p>NJ License #13VH03737800</p>
-    <p>Brian P Vuurens began in 1997 growing from a small second-generation home improvement business. We specialize in custom finish carpentry and complete interior and exterior home remodeling. Whether you’ve just purchased your first home or are moving to your retirement spot on the shore our 30 years of experience and skills can transform your property into a home you’ll love. Check out our list of services, photo gallery or contact us for your home improvement needs.</p>
-    <ul>
-      Certifications:
-      <li>Plaza School of Technology - Drafting</li>
-      <li>Rutgers - Basics of Landscape Design</li>
-      <li>Rutgers - Basics of Plant Material for Landscape Use</li>
-    </ul>
-  </div>
+    <section id="gallery" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Gallery</span>
+          <h2>Recent projects</h2>
+          <p>Browse finished work by category.</p>
+        </div>
+        <div class="categories" id="categories"></div>
+      </div>
+    </section>
 
-  <div id="services" class="card">
-    <h1>Services</h1>
-    <ul id="offered-services" class="text-center">
-      <li>Additions</li>
-      <li>Decks</li>
-      <li>Bathrooms</li>
-      <li>Kitchens</li>
-      <li>Natural Stone & Interlocking Walls</li>
-      <li>Paver or Stone Patios & Walkways</li>
-      <li>Excavating & Drainage Work</li>
-      <li>Natural Style Plantings</li>
-      <li>Complete Interior & Exterior Home Remodeling</li>
-    </ul>
-  </div>
+    <section id="contact" class="section contact">
+      <div class="wrap contact-inner">
+        <div>
+          <span class="eyebrow">Contact us</span>
+          <h2>Let's talk about your project</h2>
+          <p>Tell us what you have in mind and we'll get back to you to set up a visit.</p>
+        </div>
+        <div class="contact-methods">
+          <!-- TODO: add the phone number, e.g. <a class="btn btn-ghost" href="tel:+15555555555">(555) 555-5555</a> -->
+          <a class="btn btn-light" href="mailto:sarah@vuurensdesignbuild.com">sarah@vuurensdesignbuild.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <div id="gallery" class="card">
-    <h1>Gallery</h1>
-    <div id="galleryLinks" class="text-center"></div>
-  </div>
-
-  <div id="contactUs" class="card">
-    <h1>Contact Us</h1>
-    <div id="offered-services" class="text-center">
-      <p>
-        <strong>Contact us at:</strong> &lt;Phone Number&gt;
-      </p>
-    </div>
-  </div>
-
-  <footer class="text-center text-lg-start">
-    <div class="text-center p-3">
-      © 2025-2026 Vuurens Design Build | A <a href="https://seidman-ad.am/" target="_blank" style="color: black;">Seidman</a> and <a href="https://zachkrasne.com/" target="_blank" style="color: black;">Krasne</a> Website | <a href="/privacy" target="_blank" style="font-size: 0.95em; color: black;">Privacy Policy</a>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2025-2026 Vuurens Design Build</span>
+      <span>A <a href="https://seidman-ad.am/" target="_blank" rel="noopener">Seidman</a> and <a href="https://zachkrasne.com/" target="_blank" rel="noopener">Krasne</a> website &middot; <a href="privacy.html">Privacy Policy</a></span>
     </div>
   </footer>
 
+  <script src="images/images-list.js"></script>
+  <script src="site.js"></script>
   <script>
-    $(document).ready(() => {
-      $('a.nav-link').click(function() {
-        $('a.nav-link').removeClass('active')
-        $(this).addClass('active')
-      })
-      $('img#main-logo').click(function() {
-        $('a.nav-link').removeClass('active')
-      })
-      if (typeof galleryPhotos !== 'object') {
-        console.error('Cannot load gallery!');
-        return;
-      }
-      Object.entries(galleryPhotos).forEach(([name, obj]) => {
-        $('div#galleryLinks').append(`<a href="gallery?${name}">${obj.title}</a><br>`)
+    (() => {
+      const container = document.getElementById('categories');
+      if (typeof galleryPhotos !== 'object') return;
+      Object.entries(galleryPhotos).forEach(([key, cat]) => {
+        const link = document.createElement('a');
+        link.className = 'category';
+        link.href = `gallery.html?${encodeURIComponent(key)}`;
+        const cover = (cat.cover || cat.images[0]).replace(/\.[^.]+$/, '.jpg');
+        link.innerHTML = `
+          <img src="${encodeURI(`images/web/thumb/${key}/${cover}`)}" alt="" loading="lazy">
+          <div class="category-label">
+            <h3></h3>
+            <span>${cat.images.length} photos</span>
+          </div>`;
+        link.querySelector('h3').textContent = cat.title;
+        container.appendChild(link);
       });
-    })
+    })();
   </script>
-<!-- Bootstrap Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </body>
 </html>
